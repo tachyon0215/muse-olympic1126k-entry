@@ -18,7 +18,7 @@ MAX_CHARS = 200
 
 
 def validate(text: str) -> None:
-    """Sanity-check the entry: one tidy line, inside the character limit."""
+    """Sanity-check the entry: a single tidy line, within the character limit."""
     body = text[:-1] if text.endswith("\n") else text
     if not (1 <= len(body) <= MAX_CHARS):
         raise ValueError("entry length out of range")
